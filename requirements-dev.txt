@@ -1,0 +1,21 @@
+# TESTING
+factory_boy
+pytest
+pytest-django
+pytest-cov
+
+# OTHERS
+django-extensions
+# to generate schema with django-extensions
+
+# /!\ May require to install libgraphviz-dev first
+# sudo apt-get install libgraphviz-dev
+pygraphviz
+pyparsing==1.5.7
+pydot
+
+# Style
+flake8
+
+# debug toolbar
+django-debug-toolbar
