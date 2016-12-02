@@ -66,7 +66,7 @@ def read(*path_parts):
 
 def find_info(*path_parts):
     finder = MetaDataFinder()
-    node = ast.parse(read(*path_parts))
+    node = ast.parse(read(*path_parts).encode('utf-8'))
     finder.visit(node)
     info = finder.data
     info['docstring'] = ast.get_docstring(node)

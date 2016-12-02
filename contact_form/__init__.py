@@ -1,4 +1,5 @@
 # flake8: noqa
+# coding: utf-8
 """A reusable app to add a basic and configurable contact form."""
 
 from . import checks

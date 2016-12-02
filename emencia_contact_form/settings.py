@@ -40,6 +40,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
+
+    'django_countries',
+    'crispy_forms',
+    'crispy_forms_foundation',
+    'captcha',
+    'import_export',
     'contact_form',
 ]
 
@@ -79,11 +88,14 @@ WSGI_APPLICATION = 'emencia_contact_form.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'contact_form',
+        'USER': 'contact_form',
+        'PASSWORD': 'contact_form',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
@@ -107,7 +119,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en'
 
 TIME_ZONE = 'UTC'
 
@@ -122,3 +134,25 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = (
+    'bootstrap',
+    'uni_form',
+    'bootstrap3',
+    'bootstrap4',
+    'foundation-5',
+)
+CRISPY_TEMPLATE_PACK = 'foundation-5'
+
+RECAPTCHA_PUBLIC_KEY = 'foo'
+RECAPTCHA_PRIVATE_KEY = 'bar'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+SITE_ID = 1
+
+LANGUAGES = [
+    ('en', 'English'),
+    ('fr', 'French'),
+]

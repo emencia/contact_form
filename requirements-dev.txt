@@ -3,6 +3,10 @@ factory_boy
 pytest
 pytest-django
 pytest-cov
+pytest-flake8
+pytest-mock
+coverage
+tox
 
 # OTHERS
 django-extensions
@@ -11,7 +15,7 @@ django-extensions
 # /!\ May require to install libgraphviz-dev first
 # sudo apt-get install libgraphviz-dev
 pygraphviz
-pyparsing==1.5.7
+pyparsing
 pydot
 
 # Style
