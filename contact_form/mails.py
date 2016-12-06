@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+from __future__ import unicode_literals
+
 from django.conf import settings
 from django.contrib.sites.models import Site
 from django.core.mail import send_mail
@@ -13,7 +15,7 @@ def remove_all_newlines(string):
 
 def send_mail_to_contact(contact):
     # We need to ensure headers does *not* contain any newline
-    mail_settings = Site.objects.get_current().contactformsettings
+    mail_settings = Site.objects.get(pk=settings.SITE_ID).contactformsettings
     subject = remove_all_newlines(mail_settings.subject)
     content = render_to_string('contact_form/contact_form_message.txt',
                                {'contact': contact})

@@ -2,10 +2,11 @@
 
 import pytest
 
+from django.contrib.sites.models import Site
 from django.test import SimpleTestCase
 
-from ..mails import send_mail_to_contact, remove_all_newlines
-from ..models import Contact
+from ..mails import remove_all_newlines, send_mail_to_contact
+from ..models import Contact, ContactFormSettings
 
 
 class TestMail(SimpleTestCase):
@@ -17,6 +18,8 @@ class TestMail(SimpleTestCase):
 
 @pytest.mark.django_db
 def test_send_mail_to_contact(mocker):
+    site = Site.objects.get_current()
+    ContactFormSettings.objects.get_or_create(site__pk=site.pk)
     contact = Contact(first_name="foo", last_name="bar")
 
     mock = mocker.patch('contact_form.mails.send_mail')

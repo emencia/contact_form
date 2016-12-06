@@ -12,15 +12,16 @@ def forwards_func(apps, schema_editor):
     db_alias = schema_editor.connection.alias
 
     Site = apps.get_model("sites", "Site")
-    site = Site.objects.get(pk=settings.SITE_ID)
+    site, created = \
+        Site.objects.using(db_alias).get_or_create(pk=settings.SITE_ID)
 
     ContactFormSettings = apps.get_model("contact_form", "ContactFormSettings")
-    ContactFormSettings.objects.using(db_alias).get_or_create(site=site)
+    ContactFormSettings.objects.using(db_alias).get_or_create(site__pk=site.pk)
 
 
 def reverse_func(apps, schema_editor):
-    # forwards_func() creates PrisonerType & InstitutionType instances,
-    # so reverse_func() should delete them.
+    # forwards_func() creates one ContactFormSettings instance,
+    # so reverse_func() deletes it.
     Site = apps.get_model("sites", "Site")
     site = Site.objects.get(pk=settings.SITE_ID)
 

@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'emencia_contact_form.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'contact_form',
         'USER': 'contact_form',
         'PASSWORD': 'contact_form',

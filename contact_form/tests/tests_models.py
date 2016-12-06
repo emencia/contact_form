@@ -51,13 +51,16 @@ class TestContactFormSettings(TestCase):
         assert settings.__str__() == "Contact Form Settings"
 
     def test_email_to(self):
+        from django.conf import settings
+
         # this solely ensures arrayField behave as expected
-        site = Site.objects.get_current()
+        site = Site.objects.get(pk=settings.SITE_ID)
         # with our migration, we do already have a related settings
-        settings = site.contactformsettings
-        assert settings.email_to == ["example@example.com"]
+        csettings, createde = \
+            ContactFormSettings.objects.get_or_create(site__pk=site.pk)
+        assert csettings.email_to == ["example@example.com"]
 
         two_mails = ["a@a.fr", "b@b.fr"]
-        settings.email_to = two_mails
-        settings.save()
-        assert settings.email_to == two_mails
+        csettings.email_to = two_mails
+        csettings.save()
+        assert csettings.email_to == two_mails
