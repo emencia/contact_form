@@ -10,6 +10,6 @@ __contact__ = "adrien@emencia.com"
 __homepage__ = ""
 __license__ = "AGPL"
 
-__version__ = '0.1'
+__version__ = '0.2'
 
 default_app_config = 'contact_form.apps.ContactFormConfig'
