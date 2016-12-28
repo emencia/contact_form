@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-02 14:40+0000\n"
+"POT-Creation-Date: 2016-12-28 11:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,113 +18,110 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: contact_form/admin.py:30 contact_form/models.py:38
+#: contact_form/admin.py:31 contact_form/models.py:37
 #: contact_form/templates/contact_form/contact_form.html:7
 msgid "Contact"
 msgstr "Contact"
 
-#: contact_form/admin.py:32
+#: contact_form/admin.py:33
 msgid "Address"
 msgstr "Adresse"
 
-#: contact_form/choices.py:11
+#: contact_form/choices.py:13
 msgid "Mrs"
 msgstr "Mme"
 
-#: contact_form/choices.py:12
+#: contact_form/choices.py:14
 msgid "Mr"
 msgstr "M"
 
-#: contact_form/cms_app.py:10
-msgid "Contact form"
-msgstr "Formulaire de contact"
+#: contact_form/forms.py:40 contact_form/models.py:68
+msgid "Send mail to"
+msgstr "Destinaires de l'email"
 
-#: contact_form/forms_utils.py:27
+#: contact_form/forms.py:42
+msgid "You can specify multiple mail addresses: Separate them with a comma."
+msgstr "Vous pouvez spécifier plusieurs emails: séparez les avec une virgule."
+
+#: contact_form/forms_utils.py:36
 msgid "Submit"
 msgstr "Envoyer"
 
-#: contact_form/models.py:19
+#: contact_form/models.py:18
 msgid "Creation Date"
 msgstr "Date de création"
 
-#: contact_form/models.py:21
+#: contact_form/models.py:20
 msgid "Civility"
 msgstr "Civilité"
 
-#: contact_form/models.py:25
+#: contact_form/models.py:24
 msgid "First Name"
 msgstr "Prénom"
 
-#: contact_form/models.py:26
+#: contact_form/models.py:25
 msgid "Last Name"
 msgstr "Nom de famille"
 
-#: contact_form/models.py:27
+#: contact_form/models.py:26
 msgid "phone"
 msgstr "Téléphone"
 
-#: contact_form/models.py:28
+#: contact_form/models.py:27
 msgid "company"
 msgstr "Société"
 
-#: contact_form/models.py:29
+#: contact_form/models.py:28
 msgid "city"
 msgstr "Ville"
 
-#: contact_form/models.py:30
+#: contact_form/models.py:29
 msgid "state/province"
 msgstr "Région"
 
-#: contact_form/models.py:31
+#: contact_form/models.py:30
 msgid "Country"
 msgstr "Pays"
 
-#: contact_form/models.py:32
+#: contact_form/models.py:31
 #: contact_form/templates/contact_form/contact_form_message.txt:3
 msgid "Email"
 msgstr "Email"
 
-#: contact_form/models.py:33
+#: contact_form/models.py:32
 msgid "Message"
 msgstr "Message"
 
-#: contact_form/models.py:35
+#: contact_form/models.py:34
 msgid "Do you wish to receive the newsletter?"
 msgstr "Voulez-vous recevoir la newsletter ?"
 
-#: contact_form/models.py:39
+#: contact_form/models.py:38
 msgid "Contacts"
 msgstr "Contacts"
 
-#: contact_form/models.py:68
+#: contact_form/models.py:63
 msgid "Subject"
 msgstr "Objet"
 
-#: contact_form/models.py:71
+#: contact_form/models.py:66
 msgid "Email subject for the contact form."
 msgstr "Objet de l'email pour le formulaire de contact"
 
-#: contact_form/models.py:74
-msgid "Send mail to"
-msgstr "Destinaires de l'email"
+#: contact_form/models.py:70
+msgid "You can specify multiple mail address."
+msgstr "Vous pouvez spécifier plusieurs adresses email."
 
-#: contact_form/models.py:78
-msgid ""
-"You can specify multiple mail address.Separate them with a comma. Max: 5 "
-"addresses"
-msgstr "Vous pouvez spécifier plusieurs emails. "
-"Séparez les avec une virgule. Max: 5 emails"
-
-#: contact_form/models.py:81
+#: contact_form/models.py:72
 msgid "Send contact email as"
 msgstr "Envoyer l'email en tant que"
 
-#: contact_form/models.py:84
+#: contact_form/models.py:75
 msgid "Success Message (in html)"
 msgstr "Message de succès (en html)"
 
-#: contact_form/models.py:90 contact_form/models.py:91
-#: contact_form/models.py:94
+#: contact_form/models.py:81 contact_form/models.py:82
+#: contact_form/models.py:85
 msgid "Contact Form Settings"
 msgstr "Réglage du formulaire de contact (mail)"
 
@@ -147,3 +144,6 @@ msgstr "Société"
 #: contact_form/templates/contact_form/contact_form_message.txt:6
 msgid "Comments"
 msgstr "Commentaires"
+
+#~ msgid "Contact form"
+#~ msgstr "Formulaire de contact"
