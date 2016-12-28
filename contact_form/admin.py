@@ -6,6 +6,7 @@ from django.utils.translation import ugettext as _
 from import_export import resources
 from import_export.admin import ImportExportModelAdmin
 
+from .forms import ContactFormSettingsForm
 from .models import Contact, ContactFormSettings
 
 
@@ -33,6 +34,8 @@ class ContactAdmin(ImportExportModelAdmin):
 
 
 class ContactFormSettingsAdmin(admin.ModelAdmin):
+    form = ContactFormSettingsForm
+
     def get_form(self, request, obj=None, **kwargs):
         form = super(ContactFormSettingsAdmin, self).get_form(
             request, obj, **kwargs)

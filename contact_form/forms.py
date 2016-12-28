@@ -3,12 +3,14 @@
 from __future__ import unicode_literals
 
 from django.forms import ModelForm
+from django.utils.translation import ugettext_lazy as _
 
 from captcha.fields import ReCaptchaField
 
+from .fields import MultiEmailField
 from .forms_utils import create_basic_form_helper
 from .mails import send_mail_to_contact
-from .models import Contact
+from .models import Contact, ContactFormSettings
 
 
 class ContactForm(ModelForm):
@@ -31,3 +33,16 @@ class ContactForm(ModelForm):
         contact = super(ContactForm, self).save()
         send_mail_to_contact(contact)
         return contact
+
+
+class ContactFormSettingsForm(ModelForm):
+    email_to = MultiEmailField(
+        _("Send mail to"),
+        help_text=_(
+            "You can specify multiple mail addresses: "
+            "Separate them with a comma.")
+    )
+
+    class Meta:
+        model = ContactFormSettings
+        fields = ("site", "subject", "email_to", "email_from", "success_html")

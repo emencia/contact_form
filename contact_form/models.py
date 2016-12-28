@@ -3,7 +3,6 @@
 from __future__ import unicode_literals
 
 from django.conf import settings
-from django.contrib.postgres.fields import ArrayField
 from django.contrib.sites.models import Site
 from django.db import models
 from django.utils.encoding import python_2_unicode_compatible
@@ -57,10 +56,6 @@ class Contact(models.Model):
         return 'Contact from {contact}'.format(contact=contact)
 
 
-def default_email_to():
-    return ["example@example.com"]
-
-
 @python_2_unicode_compatible
 class ContactFormSettings(models.Model):
     site = models.OneToOneField(Site, default=settings.SITE_ID)
@@ -69,14 +64,10 @@ class ContactFormSettings(models.Model):
         max_length=255,
         default="Contact Request",
         help_text=_("Email subject for the contact form."))
-    email_to = ArrayField(
-        models.EmailField(blank=True),
-        verbose_name=_("Send mail to"),
-        size=5,
-        default=default_email_to,
-        help_text=_(
-            "You can specify multiple mail address."
-            "Separate them with a comma. Max: 5 addresses"))
+    email_to = models.TextField(
+        _("Send mail to"),
+        default="example@example.com",
+        help_text=_("You can specify multiple mail address."))
     email_from = models.EmailField(
         _("Send contact email as"),
         default="do_not_answer@emencia.com")

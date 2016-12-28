@@ -21,6 +21,7 @@ def send_mail_to_contact(contact):
                                {'contact': contact})
     mail_from = mail_settings.email_from or contact.email
     mail_from = remove_all_newlines(mail_from)
-    mail_to = [remove_all_newlines(elt) for elt in mail_settings.email_to]
+    mail_to = [remove_all_newlines(elt.strip())
+               for elt in mail_settings.email_to.split(",")]
     send_mail(subject, content, mail_from, mail_to,
               fail_silently=not settings.DEBUG)

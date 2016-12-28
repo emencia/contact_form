@@ -58,7 +58,7 @@ class TestContactFormSettings(TestCase):
         # with our migration, we do already have a related settings
         csettings, createde = \
             ContactFormSettings.objects.get_or_create(site__pk=site.pk)
-        assert csettings.email_to == ["example@example.com"]
+        assert csettings.email_to == "example@example.com"
 
         two_mails = ["a@a.fr", "b@b.fr"]
         csettings.email_to = two_mails
