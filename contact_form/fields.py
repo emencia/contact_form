@@ -10,6 +10,7 @@ class MultiEmailField(forms.Field):
         # Return an empty list if no input was given.
         if not value:
             return []
+        # We create the list from commas, trailing ones are discarded
         return [mail.strip() for mail in value.rstrip(',').split(',')]
 
     def validate(self, value):
