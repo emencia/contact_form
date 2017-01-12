@@ -16,7 +16,7 @@ classifiers = [
     'Framework :: Django',
     'Framework :: Django :: 1.10',
     'Intended Audience :: Developers',
-    'License :: OSI Approved :: AGPL License',  # example license
+    'License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)',
     'Operating System :: OS Independent',
     'Programming Language :: Python',
     'Programming Language :: Python :: 3',
