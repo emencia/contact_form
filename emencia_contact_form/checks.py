@@ -19,7 +19,7 @@ def check_mandatory_apps_are_in_installed_apps(app_configs, **kwargs):
         'crispy_forms_foundation',
         'captcha',
         'import_export',
-        'contact_form',
+        'emencia_contact_form',
     ]
 
     for module in needed_modules:
@@ -30,7 +30,7 @@ def check_mandatory_apps_are_in_installed_apps(app_configs, **kwargs):
                     hint="Add '{mod}' in your INSTALLED_APPS".format(
                         mod=module),
                     obj='Import Error',
-                    id='contact_form.check',
+                    id='emencia_contact_form.check',
                 )
             )
     return errors

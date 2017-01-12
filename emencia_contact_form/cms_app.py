@@ -10,7 +10,7 @@ class ContactApphook(CMSApp):
     name = "Contact form"
 
     def get_urls(self, page=None, language=None, **kwargs):
-        return ["contact_form.urls"]
+        return ["emencia_contact_form.urls"]
 
 
 apphook_pool.register(ContactApphook)

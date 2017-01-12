@@ -1,17 +1,7 @@
-# -*- coding: utf-8 -*-
-
-from __future__ import unicode_literals
-
-from django.conf.urls import url
-
-from .views import ContactFormSuccessView, ContactFormView
-
+from django.conf.urls import include, url
+from django.contrib import admin
 
 urlpatterns = [
-    url(r'^$',
-        ContactFormView.as_view(),
-        name="contact_form"),
-    url(r'^sent/$',
-        ContactFormSuccessView.as_view(),
-        name="contact_form_success"),
+    url(r'^admin/', admin.site.urls),
+    url(r'^', include('emencia_contact_form.urls')),
 ]

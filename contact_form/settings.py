@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'crispy_forms_foundation',
     'captcha',
     'import_export',
-    'contact_form',
+    'emencia_contact_form',
 ]
 
 MIDDLEWARE = [
@@ -62,7 +62,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'emencia_contact_form.urls'
+ROOT_URLCONF = 'contact_form.urls'
 
 TEMPLATES = [
     {
@@ -80,7 +80,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'emencia_contact_form.wsgi.application'
+WSGI_APPLICATION = 'contact_form.wsgi.application'
 
 
 # Database

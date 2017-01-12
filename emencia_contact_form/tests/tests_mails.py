@@ -22,7 +22,7 @@ def test_send_mail_to_contact(mocker):
     ContactFormSettings.objects.get_or_create(site__pk=site.pk)
     contact = Contact(first_name="foo", last_name="bar")
 
-    mock = mocker.patch('contact_form.mails.send_mail')
+    mock = mocker.patch('emencia_contact_form.mails.send_mail')
     assert not mock.called
 
     send_mail_to_contact(contact)

@@ -9,7 +9,7 @@ from setuptools import find_packages, setup
 
 # CONFIGURATION
 
-package_name = 'contact_form'
+package_name = 'emencia_contact_form'
 long_doc_file = 'README.md'
 classifiers = [
     'Environment :: Web Environment',

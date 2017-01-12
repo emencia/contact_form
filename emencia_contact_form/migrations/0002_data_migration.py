@@ -15,7 +15,7 @@ def forwards_func(apps, schema_editor):
     site, created = \
         Site.objects.using(db_alias).get_or_create(pk=settings.SITE_ID)
 
-    ContactFormSettings = apps.get_model("contact_form", "ContactFormSettings")
+    ContactFormSettings = apps.get_model("emencia_contact_form", "ContactFormSettings")
     ContactFormSettings.objects.using(db_alias).get_or_create(site__pk=site.pk)
 
 
@@ -25,7 +25,7 @@ def reverse_func(apps, schema_editor):
     Site = apps.get_model("sites", "Site")
     site = Site.objects.get(pk=settings.SITE_ID)
 
-    ContactFormSettings = apps.get_model("contact_form", "ContactFormSettings")
+    ContactFormSettings = apps.get_model("emencia_contact_form", "ContactFormSettings")
     db_alias = schema_editor.connection.alias
     ContactFormSettings.objects.using(db_alias).get(site=site).delete()
 
@@ -33,7 +33,7 @@ def reverse_func(apps, schema_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('contact_form', '0001_initial'),
+        ('emencia_contact_form', '0001_initial'),
     ]
 
     operations = [

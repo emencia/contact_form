@@ -3,6 +3,6 @@ include README.md
 include requirements.txt
 include requirements-dev.txt
 include pytest.ini
-recursive-include contact_form/static *
-recursive-include contact_form/templates *
-recursive-include contact_form/locale *
+recursive-include emencia_contact_form/static *
+recursive-include emencia_contact_form/templates *
+recursive-include emencia_contact_form/locale *

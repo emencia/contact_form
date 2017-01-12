@@ -2,6 +2,7 @@ Contact Form App
 ================
 
 This is aimed to be a reusable app for our cookiecutter.
+Django CMS integration is provided.
 It add a generic contact form with some basic configuration made available via the admin.
 
 
@@ -22,7 +23,7 @@ Install
     'crispy_forms',  # nice looking forms
     'crispy_forms_foundation',
     'captcha',
-    'contact_form',
+    'emencia_contact_form',
 ```
 
 `modeltranslation` should be placed on top of the installed apps.
@@ -31,7 +32,7 @@ There is an automatic check which makes sure all of these apps are in INSTALLED_
 
 - captcha: signup for [recaptcha](https://github.com/praekelt/django-recaptcha) and follow their installation process on their repo. (adding RECAPTCHA_PUBLIC_KEY, RECAPTCHA_PRIVATE_KEY in your settings and so on..)
 
-- Add url(r'^', include('contact_form.urls')) in your urls.py
+- Add url(r'^', include('emencia_contact_form.urls')) in your urls.py
 
 - Ensure you're using foundation with crispyforms, in your settings, add:
 
