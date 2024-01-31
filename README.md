@@ -9,7 +9,7 @@ It add a generic contact form with some basic configuration made available via t
 Install
 -------
 
-- create your virtualenv and `pip install -r requirements.txt`. For dev purposes, `pip install -r requirements-dev.txt`.
+- create your virtualenv and `pip install emencia-contact-form`.
 
 - In your `INSTALLED_APPS`, add:
 
