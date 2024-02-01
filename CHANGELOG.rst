@@ -3,8 +3,28 @@
 Changelog
 =========
 
-Version 0.3.1 - 2024/01/31
+Version 0.4.0 - 2024/02/01
 --------------------------
+
+Due to ownership problems with package on Pypi, we needed to move this package to a new
+name ``emencia-contact-form-maintenance``.
+
+Anything have been changed except the package name and the package setup, you should be
+able to safely move from 0.3 to this version and further.
+
+So instead of doing: ::
+
+    pip install emencia-contact-form
+
+You will do now: ::
+
+    pip install emencia-contact-form-maintenance
+
+Or update your project requirements in the same way.
+
+
+Version 0.3.1 - Not released as a package on Pypi
+-------------------------------------------------
 
 This is a maintenance release to level up Django support to ``1.11`` since some
 projects use it in production althrough the package explicitely limited support to

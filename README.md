@@ -1,15 +1,17 @@
-Contact Form App
-================
+emencia-contact-form-maintenance
+================================
 
-This is aimed to be a reusable app for our cookiecutter.
-Django CMS integration is provided.
+**Package has moved from 'emencia-contact-form' to 'emencia-contact-form-maintenance' due to an ownership problems on Pypi, all release up to 0.3 are still available on the old package name. Further maintenance releases since 0.4.0 will be available only on the package name 'emencia-contact-form-maintenance'. However, this package is in maintenance mode only, there will not be any other fixes or features.**
+
+This is aimed to be a reusable app for our cookiecutter. Django CMS integration is provided.
+
 It add a generic contact form with some basic configuration made available via the admin.
 
 
 Install
 -------
 
-- create your virtualenv and `pip install emencia-contact-form`.
+- create your virtualenv and `pip install emencia-contact-form-maintenance`.
 
 - In your `INSTALLED_APPS`, add:
 
@@ -63,7 +65,7 @@ Configuration on the django settings and url has to be done. [doc](https://docs.
 TEST & DEV
 ----------
 
-There is requirements-dev.txt with pdb, django-extensions and pygraphviz.
+Install with pip `requirements-dev.txt` then package in development mode.
 
 Run tests with the following command:
 `pytest`
