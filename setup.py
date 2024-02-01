@@ -31,12 +31,12 @@ setup(
         'django>=1.8,<2.0',
         'django-modeltranslation',
         'django-countries',
-        'django-crispy-forms'
+        'django-crispy-forms',
         'crispy-forms-foundation',
         'django-recaptcha',
         'django-import-export',
         'django-cms>=3',
         # used in hierarchy for ContactAdmin
-        'pytz',
+        'pytz'
     ],
 )
