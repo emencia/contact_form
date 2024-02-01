@@ -5,6 +5,7 @@ setup(
     version=__import__('emencia_contact_form').__version__,
     description=__import__('emencia_contact_form').__doc__,
     long_description=open('README.md').read(),
+    long_description_content_type="text/markdown",
     author='Emencia',
     author_email='support@emencia.com',
     url='https://github.com/emencia/contact_form',

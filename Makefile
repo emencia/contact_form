@@ -114,6 +114,7 @@ install-backend:
 	@printf "$(FORMATBLUE)$(FORMATBOLD)---> Install everything for development <---$(FORMATRESET)\n"
 	@echo ""
 	$(PIP_BIN) install -r requirements.txt
+	$(PIP_BIN) install twine
 	$(PIP_BIN) install -e .
 .PHONY: install-backend
 
